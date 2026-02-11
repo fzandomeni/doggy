@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Us Name Our Puppy!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #fef9f0;
+            color: #3d2c1e;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #3d2c1e;
+        }
+
+        .hero .paw {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a3e2b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #3d2c1e;
+            text-align: center;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: #fff;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item .caption {
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            color: #6b4f3a;
+            text-align: center;
+        }
+
+        /* Suggest Section */
+        .suggest {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 10px;
+        }
+
+        .suggest p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: #5a3e2b;
+        }
+
+        .suggest-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #3d2c1e;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
+        }
+
+        .suggest-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
+        }
+
+        /* Current Suggestions List */
+        .names-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .name-tag {
+            background: #fef3e2;
+            border: 2px solid #f6d365;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #5a3e2b;
+        }
+
+        /* Fun Facts */
+        .fun-facts {
+            background: #fff5e6;
+            border-radius: 16px;
+            padding: 24px 30px;
+            margin-top: 30px;
+        }
+
+        .fun-facts h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #3d2c1e;
+        }
+
+        .fun-facts ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .fun-facts li {
+            padding: 6px 0;
+            font-size: 1rem;
+            color: #5a3e2b;
+        }
+
+        .fun-facts li::before {
+            content: "\1F43E ";
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #a08060;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .suggest {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <p class="paw">&#128062;</p>
+        <h1>Help Us Name Our Puppy!</h1>
+        <p>We just got the cutest new family member and we need YOUR help picking the perfect name.</p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <section>
+        <h2>&#128247; Meet the Little One</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="photos/photo1.jpg" alt="Our new puppy">
+                <div class="caption">First day home!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/photo2.jpg" alt="Puppy playing">
+                <div class="caption">Already causing trouble</div>
+            </div>
+            <div class="gallery-item">
+                <img src="photos/photo3.jpg" alt="Puppy sleeping">
+                <div class="caption">Nap time champion</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggest a Name -->
+    <section>
+        <div class="suggest">
+            <h2>&#128172; Suggest a Name!</h2>
+            <p>Think you've got the perfect name? Send us your suggestion! We'll add it to the list below and pick our favorite.</p>
+
+            <!-- CHANGE THIS LINK to your WhatsApp group, email, or text number -->
+            <a href="https://wa.me/1234567890?text=My%20puppy%20name%20suggestion%20is%3A%20" class="suggest-button">
+                Send Your Suggestion
+            </a>
+
+            <!-- Current suggestions - update manually as they come in -->
+            <div class="names-list">
+                <span class="name-tag">Biscuit</span>
+                <span class="name-tag">Mochi</span>
+                <span class="name-tag">Coco</span>
+                <span class="name-tag">Waffles</span>
+                <span class="name-tag">Luna</span>
+                <span class="name-tag">Nugget</span>
+                <!-- Add more: <span class="name-tag">NewName</span> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section>
+        <div class="fun-facts">
+            <h3>Quick Facts</h3>
+            <ul>
+                <li><strong>Breed:</strong> [Your puppy's breed]</li>
+                <li><strong>Age:</strong> [X weeks old]</li>
+                <li><strong>Personality:</strong> [Playful, shy, energetic, cuddly...]</li>
+                <li><strong>Favorite thing:</strong> [Chewing shoes, belly rubs, naps...]</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Made with love for our new furry friend &#10084;&#65039;
+    </footer>
+
+</body>
+</html>
