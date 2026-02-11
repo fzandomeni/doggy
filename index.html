@@ -231,23 +231,12 @@
     <!-- Suggest a Name -->
     <section>
         <div class="suggest">
-            <h2>&#128172; Suggest a Name!</h2>
-            <p>Think you've got the perfect name? Send us your suggestion! We'll add it to the list below and pick our favorite.</p>
+            <h2>&#128172; Name Suggestions</h2>
+            <p>Got an idea? Tell Fabito and he'll add it to the list!</p>
 
-            <!-- CHANGE THIS LINK to your WhatsApp group, email, or text number -->
-            <a href="https://wa.me/1234567890?text=My%20puppy%20name%20suggestion%20is%3A%20" class="suggest-button">
-                Send Your Suggestion
-            </a>
-
-            <!-- Current suggestions - update manually as they come in -->
-            <div class="names-list">
-                <span class="name-tag">Biscuit</span>
-                <span class="name-tag">Mochi</span>
-                <span class="name-tag">Coco</span>
-                <span class="name-tag">Waffles</span>
-                <span class="name-tag">Luna</span>
-                <span class="name-tag">Nugget</span>
-                <!-- Add more: <span class="name-tag">NewName</span> -->
+            <!-- Names loaded from names.json -->
+            <div class="names-list" id="namesList">
+                <span class="name-tag">Loading names...</span>
             </div>
         </div>
     </section>
@@ -268,6 +257,24 @@
     <footer>
         Made with love for our new furry friend &#10084;&#65039;
     </footer>
+
+    <script>
+        // Load names from names.json in the same repo
+        async function loadNames() {
+            try {
+                const response = await fetch('names.json');
+                const names = await response.json();
+                const container = document.getElementById('namesList');
+                container.innerHTML = names
+                    .map(name => `<span class="name-tag">${name}</span>`)
+                    .join('');
+            } catch (error) {
+                document.getElementById('namesList').innerHTML =
+                    '<span class="name-tag">Could not load names</span>';
+            }
+        }
+        loadNames();
+    </script>
 
 </body>
 </html>
